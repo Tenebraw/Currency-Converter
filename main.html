@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exchange Rates. Convert</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="header"> <img src="images/hand2.png" alt=""> Exchange Rates & More</div>
+    <div class="container-lg">       
+        <div class="">
+            <section>
+                <div class="mainsite">
+                    <div class="row items-center">
+                        <div class="col-lg-4">
+                            <h1>See rates</h1>
+                            <div class="descripcion">
+                                <p>Build historic rate tables with your chosen base currency.</p>
+                            </div>
+                            <form action="" id="rates">
+                                <div class="fila">
+                                <label for="currency">Base Currency:</label>
+                                <div class="columna">
+                                <select class="form-select form-select-sm" aria-label="Small select example" name="currency" id="ratesoptions">
+                                    <option value="AUD">AUD (Australian dollar)</option>               
+                                    <option value="BGN">BGN (Bulgarian Lev)</option>
+                                    <option value="BRL">BRL (Brazilian real)</option>
+                                    <option value="CAD">CAD (Canadian dollar)</option>
+                                    <option value="CHF">CHF (Swiss franc)</option>
+                                    <option value="CNY">CNY (Renminbi yuán)</option>
+                                    <option value="CZK">CZK (Czech krone)</option>
+                                    <option value="DKK">DKK (Danish krone)</option>
+                                    <option value="EUR">EUR (Euro)</option>
+                                    <option value="GBP">GBP (Sterling pound)</option>
+                                    <option value="HKD">HKD (Hong Kong dollar)</option>
+                                    <option value="HUF">HUF (Hungarian forint)</option>
+                                    <option value="IDR">IDR (Indonesian rupiah)</option>
+                                    <option value="ILS">ILS (New Israeli sheqel)</option>
+                                    <option value="INR">INR (Indian rupee)</option>
+                                    <option value="ISK">ISK (Icelandic krone)</option>
+                                    <option value="JPY">JPY (Japanese yen)</option>
+                                    <option value="KRW">KRW (South Korean won)</option>
+                                    <option value="MXN">MXN (Mexican peso)</option>
+                                    <option value="MYR">MYR (Ringgit)</option>
+                                    <option value="NOK">NOK (Norwegian krone)</option>
+                                    <option value="NZD">NZD (New Zealand dollar)</option>
+                                    <option value="PHP">PHP (Philippine peso)</option>
+                                    <option value="PLN">PLN (Zloty)</option>
+                                    <option value="RON">RON (Romanian leu)</option>
+                                    <option value="SEK">SEK (Swedish krone)</option>
+                                    <option value="SGD">SGD (Singapore dollar)</option>
+                                    <option value="THB">THB (Thai baht)</option>
+                                    <option value="TRY">TRY (Turkish lira)</option>
+                                    <option value="USD">USD (Us dollar)</option>
+                                    <option value="ZAR">ZAR (South African rand)</option>                                                                        
+                                  </select>
+                                </div>
+                                 </div>
+                                <div class="fila">
+                                  <label for="datecurrency">Date:</label>
+                                  <div class="columna">
+                                  <input name="datecurrency" id="daterate" type="date" min="1999-01-04" />                            
+                                </div>            
+                                </div>
+                                <button type="submit" class="btn btn-secondary">Show</button>
+                            </form>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <div>
+                                <img src="images/money2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h1>Convert</h1>
+                            <div class="descripcion">
+                                <p>Convert all major world currencies.</p>
+                            </div>
+                            <form action="" id="convertform">
+                                <div class="formconvert">
+                                <label for="fromcurrency" class="formlabel1">From:</label>
+                                <select class="form-select form-select-sm" aria-label="Small select example" name="fromcurrency" id="fromoptions">
+                                    <option value="AUD">AUD (Australian dollar)</option>               
+                                    <option value="BGN">BGN (Bulgarian Lev)</option>
+                                    <option value="BRL">BRL (Brazilian real)</option>
+                                    <option value="CAD">CAD (Canadian dollar)</option>
+                                    <option value="CHF">CHF (Swiss franc)</option>
+                                    <option value="CNY">CNY (Renminbi yuán)</option>
+                                    <option value="CZK">CZK (Czech krone)</option>
+                                    <option value="DKK">DKK (Danish krone)</option>
+                                    <option value="EUR">EUR (Euro)</option>
+                                    <option value="GBP">GBP (Sterling pound)</option>
+                                    <option value="HKD">HKD (Hong Kong dollar)</option>
+                                    <option value="HUF">HUF (Hungarian forint)</option>
+                                    <option value="IDR">IDR (Indonesian rupiah)</option>
+                                    <option value="ILS">ILS (New Israeli sheqel)</option>
+                                    <option value="INR">INR (Indian rupee)</option>
+                                    <option value="ISK">ISK (Icelandic krone)</option>
+                                    <option value="JPY">JPY (Japanese yen)</option>
+                                    <option value="KRW">KRW (South Korean won)</option>
+                                    <option value="MXN">MXN (Mexican peso)</option>
+                                    <option value="MYR">MYR (Ringgit)</option>
+                                    <option value="NOK">NOK (Norwegian krone)</option>
+                                    <option value="NZD">NZD (New Zealand dollar)</option>
+                                    <option value="PHP">PHP (Philippine peso)</option>
+                                    <option value="PLN">PLN (Zloty)</option>
+                                    <option value="RON">RON (Romanian leu)</option>
+                                    <option value="SEK">SEK (Swedish krone)</option>
+                                    <option value="SGD">SGD (Singapore dollar)</option>
+                                    <option value="THB">THB (Thai baht)</option>
+                                    <option value="TRY">TRY (Turkish lira)</option>
+                                    <option value="USD">USD (Us dollar)</option>
+                                    <option value="ZAR">ZAR (South African rand)</option>
+                                  </select>
+
+                                  <label for="tocurrency" class="formlabel2">To:</label>
+                                  <select class="form-select form-select-sm" aria-label="Small select example" name="tocurrency" id="tooptions">
+                                    <option value="AUD">AUD (Australian dollar)</option>               
+                                    <option value="BGN">BGN (Bulgarian Lev)</option>
+                                    <option value="BRL">BRL (Brazilian real)</option>
+                                    <option value="CAD">CAD (Canadian dollar)</option>
+                                    <option value="CHF">CHF (Swiss franc)</option>
+                                    <option value="CNY">CNY (Renminbi yuán)</option>
+                                    <option value="CZK">CZK (Czech krone)</option>
+                                    <option value="DKK">DKK (Danish krone)</option>
+                                    <option value="EUR">EUR (Euro)</option>
+                                    <option value="GBP">GBP (Sterling pound)</option>
+                                    <option value="HKD">HKD (Hong Kong dollar)</option>
+                                    <option value="HUF">HUF (Hungarian forint)</option>
+                                    <option value="IDR">IDR (Indonesian rupiah)</option>
+                                    <option value="ILS">ILS (New Israeli sheqel)</option>
+                                    <option value="INR">INR (Indian rupee)</option>
+                                    <option value="ISK">ISK (Icelandic krone)</option>
+                                    <option value="JPY">JPY (Japanese yen)</option>
+                                    <option value="KRW">KRW (South Korean won)</option>
+                                    <option value="MXN">MXN (Mexican peso)</option>
+                                    <option value="MYR">MYR (Ringgit)</option>
+                                    <option value="NOK">NOK (Norwegian krone)</option>
+                                    <option value="NZD">NZD (New Zealand dollar)</option>
+                                    <option value="PHP">PHP (Philippine peso)</option>
+                                    <option value="PLN">PLN (Zloty)</option>
+                                    <option value="RON">RON (Romanian leu)</option>
+                                    <option value="SEK">SEK (Swedish krone)</option>
+                                    <option value="SGD">SGD (Singapore dollar)</option>
+                                    <option value="THB">THB (Thai baht)</option>
+                                    <option value="TRY">TRY (Turkish lira)</option>
+                                    <option value="USD">USD (Us dollar)</option>
+                                    <option value="ZAR">ZAR (South African rand)</option>
+                                  </select>
+                                </div>
+                                <div class="amount"> <label for="amount" class="amountlabel">Amount:</label>
+                                    <input type="number" name="amount"  min="1" class="amountinput" id="amount"/></div>                            
+                                  <button type="submit" class="btn btn-secondary" id="botonconvert">Convert</button>
+                            </form>
+                            <div class="convertresult">
+                                <p id="convertresult"></p>
+                            </div>
+                        </div>
+                    </div>
+<div class="contenedortabla">
+                    <table class="table table-dark table-hover" id="tablerates">
+                        <thead class="table-light">
+                            <tr>
+                              <th scope="col" class="stickyth">#</th>
+                              <th scope="col" class="stickyth" >Currency</th>
+                              <th scope="col" class="stickyth" >Value</th>
+                            </tr>
+                          </thead>
+                          <tbody>           
+                          </tbody>            
+                      </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+      </div>
+    
+ <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src='js/main.js'></script>    
+</body>
+</html>
