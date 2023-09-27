@@ -107,17 +107,3 @@ describe('Hacer una peticion HTTP. Enviar formularios.',()=>{
     cy.get('#convertform').submit() 
   })
 })
-
-
-
-/*describe('Rates',()=>{
-  beforeEach(() => {
-    cy.visit(URL)
-  })
-  it('Enviar un formulario Rates',()=>{
-    cy.get('#ratesoptions').select('AUD (Australian dollar)')
-    cy.get('#rates').submit() 
-  })
-
-
-})*/
