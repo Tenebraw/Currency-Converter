@@ -3,11 +3,11 @@ const convertForm = document.querySelector('#convertform');
 
 document.querySelector("#daterate").valueAsDate = new Date();
 
+
 ratesForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let optionRate = document.querySelector("#ratesoptions").value;
   let dateRate = document.querySelector('#daterate').value;
-
 
   fetch(`https://api.frankfurter.app/${dateRate}?from=${optionRate}`)
 .then(respuesta=>respuesta.json())
@@ -56,3 +56,49 @@ convertForm.addEventListener('submit',(e)=>{
 
 //fetch(`http://api.exchangeratesapi.io/v1/2013-12-24?access_key=${accessKey}&base=${baseRate}`)
 //"base_currency_access_restricted"!!!!
+
+
+function isEmptyRates() {
+    let optionRate = document.querySelector("#ratesoptions").value;
+    let selectElement = document.querySelectorAll('[name=currency]');
+    let optionValues = [...selectElement[0].options].map(o => o.value);
+    optionValues.shift();
+
+    if(!optionValues.includes(optionRate)){
+        document.querySelector('#ratesoptions').style.border='2px solid red';
+        return false;
+    } 
+    else{
+        document.querySelector('#ratesoptions').style.border='';
+        return true;
+    }   
+}
+
+function isEmptyConvert(){
+    let fromOptions = document.querySelector('#fromoptions').value;
+    let toOptions = document.querySelector('#tooptions').value;
+
+    let selectFrom=document.querySelectorAll('[name=fromcurrency]');
+    let selectTo=document.querySelectorAll('[name=tocurrency]');
+
+    let fromValues=[...selectFrom[0].options].map(o=>o.value);
+    fromValues.shift();
+    let toValues=[...selectTo[0].options].map(o=>o.value);
+    toValues.shift();
+
+    if(!fromValues.includes(fromOptions)  ||  !toValues.includes(toOptions)){
+        document.querySelector('#fromoptions').style.border='2px solid red';
+        document.querySelector('#tooptions').style.border='2px solid red';
+        return false;
+    }
+    else{
+        document.querySelector('#fromoptions').style.border='';
+        document.querySelector('#tooptions').style.border='';
+        return true;
+    }
+
+
+
+
+
+}

@@ -30,6 +30,7 @@
                                 <label for="currency">Base Currency:</label>
                                 <div class="columna">
                                 <select class="form-select form-select-sm" aria-label="Small select example" name="currency" id="ratesoptions">
+                                    <option selected>Open this select menu</option>
                                     <option value="AUD">AUD (Australian dollar)</option>               
                                     <option value="BGN">BGN (Bulgarian Lev)</option>
                                     <option value="BRL">BRL (Brazilian real)</option>
@@ -70,7 +71,7 @@
                                   <input name="datecurrency" id="daterate" type="date" min="1999-01-04" />                            
                                 </div>            
                                 </div>
-                                <button type="submit" class="btn btn-secondary">Show</button>
+                                <button type="submit" class="btn btn-secondary"  onClick="return isEmptyRates()">Show</button>
                             </form>
                         </div>
                         <div class="col-lg-4 text-center">
@@ -87,6 +88,7 @@
                                 <div class="formconvert">
                                 <label for="fromcurrency" class="formlabel1">From:</label>
                                 <select class="form-select form-select-sm" aria-label="Small select example" name="fromcurrency" id="fromoptions">
+                                    <option selected>Open this select menu</option>
                                     <option value="AUD">AUD (Australian dollar)</option>               
                                     <option value="BGN">BGN (Bulgarian Lev)</option>
                                     <option value="BRL">BRL (Brazilian real)</option>
@@ -122,6 +124,7 @@
 
                                   <label for="tocurrency" class="formlabel2">To:</label>
                                   <select class="form-select form-select-sm" aria-label="Small select example" name="tocurrency" id="tooptions">
+                                    <option selected>Open this select menu</option>
                                     <option value="AUD">AUD (Australian dollar)</option>               
                                     <option value="BGN">BGN (Bulgarian Lev)</option>
                                     <option value="BRL">BRL (Brazilian real)</option>
@@ -157,7 +160,7 @@
                                 </div>
                                 <div class="amount"> <label for="amount" class="amountlabel">Amount:</label>
                                     <input type="number" name="amount"  min="1" class="amountinput" id="amount"/></div>                            
-                                  <button type="submit" class="btn btn-secondary" id="botonconvert">Convert</button>
+                                  <button type="submit" class="btn btn-secondary" id="botonconvert" onClick="return isEmptyConvert()">Convert</button>
                             </form>
                             <div class="convertresult">
                                 <p id="convertresult"></p>
